@@ -2,32 +2,53 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 .chart {
   width: 750px;
 }
-.react-player {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  padding: 20px;
+
+.library {
+  max-width: 1300px;
+  margin: auto;
 }
-.react-player > div {
-  width: 100%;
-  max-width: 400px;
-  background: white;
-  color: black;
-  box-shadow: 0px 0px 15px grey;
+.library > h2 {
+  padding: 0px 0px 10px 0;
+  border-bottom: 1px solid grey;
+  width: fit-content;
+}
+.react-player {
+  margin-bottom: 40px;
+}
+.swiper-slide {
+  background: #000;
+  color: lightgrey;
+}
+.swiper-slide > div {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
-.react-player > div p {
+.swiper-button-prev, .swiper-button-next {
+  background: rgba(0,0,0,0.5);
+}
+.swiper-slide  p {
   padding: 20px;
-  font-weight: 800;
-  font-size: 13px;
-  font-family: sans-serif;
+  font-weight: 600;
+}
+.header {
+  text-align: center;
+  padding: 50px 20px;
+}
+.header > h1 {
+  font-size: 40px;
+  background: #00FF00;
+  background: linear-gradient(to left, #00FF00 0%, #FF0000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.header > h2 {
+  font-size: 15px;
+  color: crimson;
 }
