@@ -1,21 +1,63 @@
 import ReactPlayer from "react-player/youtube"
 import 'swiper/css';
+import { useState, useEffect } from 'react';
 import { Navigation} from 'swiper';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import { A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css';
 
 const Games = () => {
+  const [breakpoint, setBreakpoint] = useState({
+    slidesPerView: 4,
+    spaceBetween: 50,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 320) {
+        setBreakpoint({
+          slidesPerView: 1,
+          spaceBetween: 10,
+        });
+      } else if (window.innerWidth < 480) {
+        setBreakpoint({
+          slidesPerView: 1,
+          spaceBetween: 20,
+        });
+      } else if (window.innerWidth < 768) {
+        setBreakpoint({
+          slidesPerView: 1.5,
+          spaceBetween: 20,
+        });
+      } else if (window.innerWidth < 1024) {
+        setBreakpoint({
+          slidesPerView: 2.3,
+          spaceBetween: 20,
+        });
+      } else if (window.innerWidth < 1200) {
+        setBreakpoint({
+          slidesPerView: 2.4,
+          spaceBetween: 20,
+        });
+      }
+       else {
+        setBreakpoint({
+          slidesPerView: 2.5,
+          spaceBetween: 10,
+        });
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <div className="react-player">
     <Swiper
       modules={[Navigation, A11y]}
-      spaceBetween={40}
-      slidesPerView={2.5}
+      spaceBetween={breakpoint.spaceBetween}
+        slidesPerView={breakpoint.slidesPerView}
       navigation
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
