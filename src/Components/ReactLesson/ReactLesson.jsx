@@ -116,27 +116,46 @@ const ReactLesson = () => {
       onSlideChange={() => console.log('slide change')}
 
     >
-      <SwiperSlide
-        className="swiper"
-      
-      >
-         <div>
-            <ReactPlayer controls width={'100%'} url='https://www.youtube.com/watch?v=9boMnm5X9ak&list=PLC3y8-rFHvwheJHvseC3I0HuYI2f46oAK&index=1' />
-            <p>React redux tutorial episode 1</p>
+      {/* NODEJS CODEVOLUTION*/}
+      <SwiperSlide>
+      <div>
+            <ReactPlayer controls width={'100%'} url='https://youtu.be/JQfOtwfDohY' />
+            <p>NodeJS Episode 13</p>
         </div>
       </SwiperSlide>
       <SwiperSlide>
       <div>
-            <ReactPlayer controls width={'100%'} url='https://www.youtube.com/watch?v=0eluxklOZVo' />
-            <p>React redux tutorial episode 2</p>
+            <ReactPlayer controls width={'100%'} url='https://youtu.be/F_GmxjP80so' />
+            <p>NodeJS Episode 14</p>
         </div>
       </SwiperSlide>
       <SwiperSlide>
       <div>
-            <ReactPlayer controls width={'100%'} url='https://www.youtube.com/watch?v=3rlUADfuKhQ' />
-            <p>React redux tutorial episode 2</p>
+            <ReactPlayer controls width={'100%'} url='https://youtu.be/ghUIlSNRru0' />
+            <p>NodeJS Episode 15</p>
         </div>
       </SwiperSlide>
+      <SwiperSlide>
+      <div>
+            <ReactPlayer controls width={'100%'} url='https://youtu.be/g98XlFOiXz0' />
+            <p>NodeJS Episode 16</p>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+      <div>
+            <ReactPlayer controls width={'100%'} url='https://youtu.be/Es7SzBBc6qE' />
+            <p>NodeJS Episode 17</p>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+      <div>
+            <ReactPlayer controls width={'100%'} url='https://youtu.be/kRG8QpOKZE4' />
+            <p>NodeJS Episode 18</p>
+        </div>
+      </SwiperSlide>
+      {/* NODEJS #100DEVS */}
+      {/* ADVANCED REACT SCRIMBA*/}
+      {/* REDUX TOOLKIT CODEVOLUTION */}
     </Swiper>
     </div>
   )

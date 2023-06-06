@@ -7,7 +7,7 @@ const ReactPlayers  = () => {
     <section className="library">
       <h2>Games</h2>
       <Games />
-      <h2>React Redux Tutorial</h2>
+      <h2>NODEJS CODEVOLUTION</h2>
       <ReactLesson />
     </section>
   )
